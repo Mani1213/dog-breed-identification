@@ -50,7 +50,9 @@ app = gr.Interface(
     inputs=gr.Image(type="pil", label="Upload an image of a dog"),
     outputs=gr.Text(label="Prediction"),
     title="Dog Breed Prediction App",
+    allow_flagging="auto",
     description="Upload an image to predict the dog breed.",
 )
 
-app.launch(share=True)
+if __name__ == '__main__':
+    app.launch(share=True)
